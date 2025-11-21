@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import avatarImage from "@/assets/avatar.png";
 import TextType from "@/animation/TextStyle";
@@ -68,20 +68,7 @@ const HeroSection = () => {
           </Button>
           <Button variant="neon" size="xl" className="group">
             Download Resume
-            <Mail className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-          </Button>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6 animate-slide-up delay-700">
-          <Button variant="glass" size="icon" className="hover:scale-110 transition-transform">
-            <Github className="h-5 w-5" />
-          </Button>
-          <Button variant="glass" size="icon" className="hover:scale-110 transition-transform">
-            <Linkedin className="h-5 w-5" />
-          </Button>
-          <Button variant="glass" size="icon" className="hover:scale-110 transition-transform">
-            <Mail className="h-5 w-5" />
+            <Download className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
           </Button>
         </div>
       </div>

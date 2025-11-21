@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink, Star, GitFork, Eye, TrendingUp, Shield, Coins, Gamepad2 } from "lucide-react";
+import { ExternalLink, Star, GitFork, Eye, TrendingUp, Shield, Coins, Gamepad2 } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
 
 const ProjectsSection = () => {
@@ -15,7 +15,8 @@ const ProjectsSection = () => {
       tags: ["Solidity", "DeFi", "Yield Farming", "Multi-chain"],
       stats: { tvl: "$12.5M", apy: "18.5%", chains: "3" },
       icon: TrendingUp,
-      featured: true
+      featured: true,
+      demoUrl: "https://yearn.fi"
     },
     {
       title: "SecureNFT Marketplace",
@@ -24,7 +25,8 @@ const ProjectsSection = () => {
       tags: ["ERC-721", "ERC-1155", "IPFS", "React"],
       stats: { volume: "$8.2M", collections: "150+", users: "5K+" },
       icon: Shield,
-      featured: true
+      featured: true,
+      demoUrl: "https://opensea.io"
     },
     {
       title: "MetaToken Launchpad",
@@ -33,7 +35,8 @@ const ProjectsSection = () => {
       tags: ["ERC-20", "Governance", "Vesting", "AMM"],
       stats: { raised: "$25M", projects: "48", success: "92%" },
       icon: Coins,
-      featured: false
+      featured: false,
+      demoUrl: "https://daomaker.com"
     },
     {
       title: "ChainQuest Gaming",
@@ -42,7 +45,8 @@ const ProjectsSection = () => {
       tags: ["Gaming", "P2E", "Layer 2", "Meta-tx"],
       stats: { players: "12K+", items: "50K+", guilds: "200+" },
       icon: Gamepad2,
-      featured: false
+      featured: false,
+      demoUrl: "https://www.sandbox.game"
     }
   ];
 
@@ -112,11 +116,12 @@ const ProjectsSection = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <Button variant="neon" size="sm" className="flex-1">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button variant="glass" size="sm" className="flex-1">
+                  <Button 
+                    variant="glass" 
+                    size="sm" 
+                    className="flex-1"
+                    onClick={() => project.demoUrl && window.open(project.demoUrl, '_blank', 'noopener,noreferrer')}
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Button>

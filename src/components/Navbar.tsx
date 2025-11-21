@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,8 +19,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Projects", href: "#projects" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -58,19 +57,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Social Links */}
-          <div className="hidden md:flex items-center space-x-3">
-            <Button variant="ghost" size="icon" className="transition duration-300">
-              <Github className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="icon" className="transition duration-300">
-              <Linkedin className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="icon" className="transition duration-300">
-              <Mail className="h-4 w-4" />
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
@@ -96,17 +82,6 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
-            <div className="flex justify-center space-x-4 pt-4">
-              <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Mail className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
         </div>
       </div>

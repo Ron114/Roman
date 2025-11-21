@@ -31,10 +31,9 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, name: "GitHub", url: "#", username: "@alex-rivera" },
-    { icon: Linkedin, name: "LinkedIn", url: "#", username: "/in/alex-rivera" },
-    { icon: Twitter, name: "Twitter", url: "#", username: "@alex_web3dev" },
-    { icon: Mail, name: "Email", url: "#", username: "alex.rivera@email.com" }
+    { icon: Github, name: "GitHub", url: "https://github.com/Ron114/Roman", username: "@Ron114" },
+    { icon: Mail, name: "Email", url: "bluesky.engineer428@gmail.com", username: "bluesky.engineer428@gmail.com" }
+    
   ];
 
   return (
@@ -145,6 +144,7 @@ const ContactSection = () => {
                     key={index}
                     variant="glass" 
                     className="h-auto p-4 flex flex-col items-center space-y-2 hover:neon-glow transition-all duration-300"
+                    onClick={() => window.open(social.url, '_blank')}
                   >
                     <social.icon className="h-6 w-6 text-primary" />
                     <div className="text-center">

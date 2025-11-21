@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Download, ExternalLink } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import avatarImage from "@/assets/avatar.png";
 import TextType from "@/animation/TextStyle";
@@ -58,18 +56,6 @@ const HeroSection = () => {
             and cutting-edge Web3 applications. Specializing in Ethereum, Layer 2 solutions,
             and multi-chain ecosystems.
           </p>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up delay-500">
-          <Button variant="hero" size="xl" className="group">
-            View My Projects
-            <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button variant="neon" size="xl" className="group">
-            Download Resume
-            <Download className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-          </Button>
         </div>
       </div>
 

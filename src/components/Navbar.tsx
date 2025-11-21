@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import avatarImage from "@/assets/avatar.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +40,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
+            <img 
+              src={avatarImage} 
+              alt="Logo" 
+              className="h-10 w-10 rounded-full object-cover border-2 border-primary/50"
+            />
             <span className="text-2xl font-bold text-gradient">AR</span>
           </div>
 

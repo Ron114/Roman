@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Star, GitFork, Eye, TrendingUp, Shield, Coins, Gamepad2 } from "lucide-react";
+import { ExternalLink, Star, GitFork, Eye, TrendingUp, Shield, Coins, Gamepad2, Network, Zap } from "lucide-react";
 import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
 
 const ProjectsSection = () => {
@@ -47,6 +47,26 @@ const ProjectsSection = () => {
       icon: Gamepad2,
       featured: false,
       demoUrl: "https://www.sandbox.game"
+    },
+    {
+      title: "CrossChain Bridge Protocol",
+      description: "A secure multi-chain bridge enabling seamless asset transfers across Ethereum, Polygon, BSC, and Arbitrum. Features atomic swaps, liquidity pools, and real-time monitoring.",
+      image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a0b?w=600&h=400&fit=crop&crop=entropy&cs=tinysrgb",
+      tags: ["Bridge", "Multi-chain", "Atomic Swap", "Solidity"],
+      stats: { volume: "$45M", chains: "8", txns: "125K+" },
+      icon: Network,
+      featured: true,
+      demoUrl: "https://app.uniswap.org"
+    },
+    {
+      title: "LayerZero Scaling Solution",
+      description: "An advanced Layer 2 scaling protocol with zero-knowledge proofs, reducing gas costs by 99%. Features instant finality, EVM compatibility, and seamless mainnet integration.",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop&crop=entropy&cs=tinysrgb",
+      tags: ["Layer 2", "ZK-Proofs", "Scaling", "EVM"],
+      stats: { tps: "10K+", savings: "99%", users: "50K+" },
+      icon: Zap,
+      featured: false,
+      demoUrl: "https://app.optimism.io"
     }
   ];
 
@@ -129,14 +149,6 @@ const ProjectsSection = () => {
               </div>
             </Card>
           ))}
-        </div>
-
-        {/* View More Button */}
-        <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
-            View All Projects
-            <ExternalLink className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </div>
     </section>
